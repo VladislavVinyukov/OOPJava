@@ -1,6 +1,15 @@
+import java.time.Year;
 import java.util.ArrayList;
 
 public class human {
+    enum atHome {
+        Yes, No
+
+    }
+    {
+        atHome yes = atHome.Yes;
+
+    }
     String name;
     String gender;
     String married;
@@ -9,6 +18,7 @@ public class human {
     String status;
     String hasChildren;
     String spouse;
+    private atHome state;
 
     public human(String name, String mother, String father, String status, String hasChildren, String gender,
                  String married){
@@ -63,6 +73,82 @@ public class human {
         return info;
 
     }
+    public void spousetAtHome(){
+        if(this.state == atHome.No ){
+            System.out.println("the spouse is not at home");
+            this.childrenAtHome();
+        }
+        else {
+            System.out.println("children take out Trash");
+            this.childrenAtHome();
+            this.toDo();
+            this.comeHome();
+            this.finisht();
+            return;
+        }
+    }
+
+    public void childrenAtHome(){
+        if(this.state == atHome.No ){
+            System.out.println("the children is not at home");
+            System.out.println("Okay then I'll");
+            this.myself();
+            this.comeHome();
+            this.finisht();
+
+        }
+        else {
+            System.out.println("yes Mom im, getting dressed");
+            this.toDo();
+            this.comeHome();
+            this.finisht();
+            return;
+        }
+    }
+    public void myself(){
+        toDo();
+        comeHome();
+        finisht();
+    }
+
+    public void takeOutTrash(){
+        System.out.println("Need take out of Trash");
+        this.spousetAtHome();
+    }
+    public void toDo(){
+        this.gettingDressed();
+        this.leaveHome();
+        this.gone();
+
+    }
+    public void gettingDressed(){
+        System.out.println("I'm getting dressed already");
+    }
+    public void leaveWork (){
+        System.out.println("Darling, I am leave at work");
+        this.toDo();
+    }
+    public void leaveSchool(){
+        System.out.println("Mom, I am leave at school");
+        this.toDo();
+    }
+    public void leaveHome(){
+        System.out.println("I'm leaving home");
+        this.state = atHome.No;
+    }
+    public void comeHome(){
+        System.out.println("I came home");
+        this.state = atHome.Yes;
+    }
+    public void gone(){
+
+        System.out.println( "is gone ");
+    }
+    public void finisht(){
+        System.out.println("I threw out the trash");
+        return;
+    }
+
 
     public String getSpouse() {
         return spouse;

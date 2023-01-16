@@ -1,5 +1,6 @@
 public class View {
     public static void view(human a, int n) {
+
         String line  = "_".repeat(n);
         System.out.println(line + a.name);
 

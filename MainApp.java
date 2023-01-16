@@ -10,7 +10,7 @@ public class MainApp {
                 "no", "woman", "yes", "Piter");
         human Piter = new human("Piter", "Monica", "Jon", "son-in-law", "no",
                 "man","yes", "Rebeca");
-
+/*
         System.out.println(Tom.getInfoHuman());
         System.out.println(Richard.getInfoHuman());
         System.out.println(Julia.getInfoHuman());
@@ -21,6 +21,15 @@ public class MainApp {
         Richard.addHuman(Rebeca);
         Rebeca.addHuman(Piter);
         View.view(Richard, 0);
+*/
+
+
+        Richard.leaveWork();
+        Tom.leaveSchool();
+        Richard.takeOutTrash();
+        Richard.comeHome();
+        Richard.takeOutTrash();
+
 
 
     }
