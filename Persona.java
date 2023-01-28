@@ -1,11 +1,15 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Persona {
-    public String FullName;
+public class Persona extends Human{
+    //public String FullName;
+    public PetList persPet;
 
-    public Persona(String Name){
-        this.FullName=Name;
+    public Persona(String Name, String Gender, int Age, String PersPet){
+        SetName(Name);
+        SetGender(Gender);
+        SetAge(Age);
+        this.persPet = new PetList(PersPet);
     }
 
     ArrayList <Persona> listName = new ArrayList<>();
@@ -17,5 +21,8 @@ public class Persona {
     public ArrayList<Persona> getListName(){
         return listName;
     }
+
+
+
 }
 
