@@ -20,7 +20,7 @@ public class Main {
         Smith.members.add(new Persona("Ilon",
                 male,
                 "father",
-                LocalDate.of(1979,5,16),true));
+                LocalDate.of(1979,5,16),false));
 
         Smith.members.add(new Persona("Ada",
                 female,
@@ -38,10 +38,14 @@ public class Main {
                 LocalDate.of(2009,12,12),
                 true));//, 2009-12-12);
 
-        Cat Tom = new Cat("Tom","Siam","Red","22", 12);
+        Cat Tom = new Cat("Tom","Siam","Red","22.06.2020", 12);
         Tom.AskFood();
         Smith.FeedPets(Tom);
+        Dog Spike = new Dog("Spike","Bulldog","white","22/12/2018",18);
+        Spike.AskWalk();
+
+        rabbit Roger = new rabbit("Roger","rabbit","red-white","12.11.2020",13);
+        Smith.WalkPets(Spike);
+
     }
-
-
 }

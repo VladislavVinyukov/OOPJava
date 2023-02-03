@@ -25,9 +25,6 @@ public Persona(String Name, TGender gender, String familyStatus, LocalDate dateb
     this.DateB = dateb;
     this.AtHome = atHome;
 
-
-
-
 }
 
 

@@ -1,6 +1,6 @@
 package Homework.CatsDogs;
 
-abstract public class Animals {
+abstract public class Animals  {
     String Name;
     String Breed;
     String Color;
@@ -10,5 +10,9 @@ abstract public class Animals {
 
     abstract void Voice();
     abstract void AskFood();
+
+    interface AskWalkPet{
+        void AskWalk();
+    }
 
 }
