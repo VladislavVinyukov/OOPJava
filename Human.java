@@ -3,6 +3,9 @@ public abstract class Human {
     private String gender;
     private int age;
 
+    public Human(String s, String s1, String s2) {
+    }
+
     public void SetGender(String Gender){
         this.gender = Gender;
     }
